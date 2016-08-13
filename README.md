@@ -2,8 +2,8 @@
 The website work of GDG : www.gdgbvp.in 
 
 #Branches
-=> gh-pages : live website code
-=> master : dev branch [on going unstable or stable code]
+1. gh-pages : live website code
+2. master : dev branch [on going unstable or stable code]
 
 #Contribution
 
