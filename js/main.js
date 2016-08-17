@@ -440,12 +440,20 @@
 
 	
 	
+	var cursorAnimation = function () {
+			alert('sd');
+		    $('#cursor').animate({
+		        opacity: 0
+		    }, 'fast', 'swing').animate({
+		        opacity: 1
+		    }, 'fast', 'swing');
+		}
 
 	// Document on load.
 	$(function(){
 
 		burgerMenu();
-		owlCrouselFeatureSlide();
+		// owlCrouselFeatureSlide();
 		clickMenu();
 		windowScroll();
 		navigationSection();
@@ -458,6 +466,14 @@
 		pricingWayPoint();
 		pressWayPoint();
 
+
+		setInterval(function () {
+			$('#cursor').animate({
+				opacity: 0
+			}, 200, 'swing').animate({
+				opacity:1
+			}, 200, 'swing');
+		}, 600);
 	});
 
 
