@@ -449,8 +449,26 @@
 		    }, 'fast', 'swing');
 		}
 
+
 	// Document on load.
 	$(function(){
+
+		var daysCounter = $('#daysCounter');
+		var hoursCounter = $('#hoursCounter');
+		var minutesCounter = $('#minutesCounter');
+
+		var refreshTime = function(){
+			var today = new Date();
+			var eventDay = new Date('August 23, 2016 11:00:00');
+			var difference = eventDay.getTime() - today.getTime();
+			var days = Math.floor(difference/(60*60*1000*24));
+			var left = difference%(60*60*1000*24)
+			var hours = Math.floor(left/(60*60*1000));
+			var minutes = Math.floor( (left%(60*60*1000)) /(1000*60));
+			daysCounter.html(days);
+			hoursCounter.html(hours);
+			minutesCounter.html(minutes);
+		}
 
 		burgerMenu();
 		// owlCrouselFeatureSlide();
@@ -474,6 +492,8 @@
 				opacity:1
 			}, 200, 'swing');
 		}, 600);
+
+		setInterval(refreshTime,1000);
 	});
 
 

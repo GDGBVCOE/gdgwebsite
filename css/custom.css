@@ -1,0 +1,18 @@
+@font-face {
+	font-family: Phosphate;
+	src: url(fonts/ufonts.com_phosphateinline.woff);
+}
+
+.slider-head{
+	font-family: Phosphate;
+}
+
+.custom-well {
+
+	padding: 20px 20px;
+	background: rgba(0,0,0,0.5);
+	border:none;
+	font-size:30px;
+	color:#fff;
+
+}
