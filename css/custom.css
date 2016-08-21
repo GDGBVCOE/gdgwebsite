@@ -1,10 +1,14 @@
-@font-face {
-	font-family: Phosphate;
-	src: url(fonts/ufonts.com_phosphateinline.woff);
-}
+// @font-face {
+//   font-family: 'Phosphate';
+//   src: url('fonts/ufonts.com_phosphateinline.eot'); /* IE9 Compat Modes */
+//   src: url('fonts/ufonts.com_phosphateinline.woff') format('woff'), /* Pretty Modern Browsers */
+//        url('fonts/ufonts.com_phosphateinline.ttf')  format('truetype'), /* Safari, Android, iOS */
+// }
+
 
 .slider-head{
-	font-family: Phosphate;
+	font-family: 'Phosphate';
+	font-style: normal;
 }
 
 .custom-well {

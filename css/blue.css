@@ -1084,8 +1084,8 @@ h1, h2, h3, h4, h5, h6 {
 .js .to-animate,
 .js .to-animate-2,
 .js .single-animate {
-  // opacity: 0;
-  opacity: 1;
+  opacity: 0;
+  // opacity: 1;
 }
 
 @media screen and (max-width: 480px) {
@@ -1183,3 +1183,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*# sourceMappingURL=blue.css.map */
+
+.event-image {
+  height: 200px;
+}
