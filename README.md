@@ -1,5 +1,5 @@
 # gdgwebsite
-The website work of GDG : www.gdgbvp.in 
+The website work of GDG : www.gdgbvp.org
 
 #Branches
 1. gh-pages : live website code

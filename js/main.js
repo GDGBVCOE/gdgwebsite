@@ -457,10 +457,13 @@
 		var hoursCounter = $('#hoursCounter');
 		var minutesCounter = $('#minutesCounter');
 
+		var eventDay = '';
+		
 		var refreshTime = function(){
 			var today = new Date();
-			var eventDay = new Date('August 23, 2016 11:00:00');
 			var difference = eventDay.getTime() - today.getTime();
+			if(difference < 0)
+				difference = 0;
 			var days = Math.floor(difference/(60*60*1000*24));
 			var left = difference%(60*60*1000*24)
 			var hours = Math.floor(left/(60*60*1000));
@@ -493,7 +496,16 @@
 			}, 200, 'swing');
 		}, 600);
 
-		setInterval(refreshTime,1000);
+
+		$.get('https://gdgbvcoe.github.io/website_data/event.txt?v='+Date.now(), function(response){
+			var data = response.split("\n");
+			$('#venue').html(data[1]);
+			$('#eventTitle').html(data[0]);
+			eventDay = new Date(data[2]);
+
+			setInterval(refreshTime,1000);
+		})
+
 	});
 
 
